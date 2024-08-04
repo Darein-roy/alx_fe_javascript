@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Function to populate category filter dropdown
-  function populateCategoryFilter() {
+  function populateCategory() {
     const uniqueCategories = [...new Set(quotes.map(quote => quote.category))];
     categoryFilter.innerHTML = '<option value="all">All Categories</option>';
     uniqueCategories.forEach(category => {
