@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Function to import quotes from a JSON file
-  function importFromJsonFile(event) {
+  function fetchQuotesFromServer(event) {
     const fileReader = new FileReader();
     fileReader.onload = function(event) {
       const importedQuotes = JSON.parse(event.target.result);
