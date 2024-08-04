@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to save quotes to local storage
   function saveQuotes() {
     localStorage.setItem('quotes', JSON.stringify(quotes));
-    populateCategoryFilter();
+    populateCategories();
   }
 
   // Function to show a random quote
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Function to populate category filter dropdown
-  function populateCategory() {
+  function populateCategories() {
     const uniqueCategories = [...new Set(quotes.map(quote => quote.category))];
     categoryFilter.innerHTML = '<option value="all">All Categories</option>';
     uniqueCategories.forEach(category => {
